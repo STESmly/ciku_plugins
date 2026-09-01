@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "file": "full.ck",
+    "author": {
+      "openid": "A1",
+      "nickname": "A"
+    },
+    "upload_date": "2026-09-01 18:19:42",
+    "version": "1.0.0",
+    "update_date": "2026-09-01 18:19:42",
+    "tag": "工具",
+    "description": "简介",
+    "contact": "QQ:1",
+    "downloads": 0,
+    "ratings": {}
+  }
+]
