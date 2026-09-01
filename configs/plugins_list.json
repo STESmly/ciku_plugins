@@ -10,17 +10,5 @@
     "version": "1.0.0",
     "update_date": "2026-09-01 17:14:19",
     "tag": "t"
-  },
-  {
-    "file": "test_big.ck",
-    "author": {
-      "openid": "A1",
-      "nickname": "A",
-      "avatar": "http://a"
-    },
-    "upload_date": "2026-09-01 17:17:57",
-    "version": "1.0.0",
-    "update_date": "2026-09-01 17:17:57",
-    "tag": "t"
   }
 ]
