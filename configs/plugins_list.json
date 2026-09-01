@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "file": "mydict.ck",
+    "author": {
+      "avatar": "",
+      "nickname": "",
+      "openid": "512EB67EE39A08C1C1E043F512FF66AA"
+    },
+    "upload_date": "2026-09-01 18:26:37",
+    "version": "2.1.0",
+    "update_date": "2026-09-01 18:26:37",
+    "tag": "工具",
+    "description": "我的字典",
+    "contact": "QQ:1",
+    "downloads": 0,
+    "ratings": {}
+  }
+]
