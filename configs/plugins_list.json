@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "file": "temp_plugin.ck",
+    "author": {
+      "avatar": "",
+      "nickname": "作者A",
+      "openid": "author_a"
+    },
+    "upload_date": "2026-09-01 17:29:45",
+    "version": "1.0.0",
+    "update_date": "2026-09-01 17:29:45",
+    "tag": "测试"
+  }
+]
