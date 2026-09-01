@@ -12,6 +12,11 @@
     "description": "简介",
     "contact": "QQ:1",
     "downloads": 1,
-    "ratings": {}
+    "ratings": {
+      "5": 1,
+      "_raters": {
+        "512EB67EE39A08C1C1E043F512FF66AA": "5"
+      }
+    }
   }
 ]
