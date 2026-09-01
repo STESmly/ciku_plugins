@@ -1,0 +1,14 @@
+[
+  {
+    "file": "test_market.ck",
+    "author": {
+      "avatar": "http://a",
+      "nickname": "作者A",
+      "openid": "openid_A"
+    },
+    "upload_date": "2026-09-01 16:59:57",
+    "version": "1.0.0",
+    "update_date": "2026-09-01 16:59:57",
+    "tag": "测试"
+  }
+]
