@@ -1,14 +1,1 @@
-[
-  {
-    "file": "test_plugin.ck",
-    "author": {
-      "avatar": "https://example.com/avatar.png",
-      "nickname": "测试用户",
-      "openid": "test_openid_123"
-    },
-    "upload_date": "2026-09-01 17:29:07",
-    "version": "1.0.1",
-    "update_date": "2026-09-01 17:29:15",
-    "tag": "测试"
-  }
-]
+[]
