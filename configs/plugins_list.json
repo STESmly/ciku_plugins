@@ -10,5 +10,20 @@
     "version": "1.0.0",
     "update_date": "2026-09-01 18:15:05",
     "tag": ""
+  },
+  {
+    "file": "direct_test.ck",
+    "author": {
+      "openid": "A1",
+      "nickname": "A"
+    },
+    "upload_date": "2026-09-01 18:15:58",
+    "version": "1.0.0",
+    "update_date": "2026-09-01 18:15:58",
+    "tag": "工具",
+    "description": "简介内容",
+    "contact": "QQ:123",
+    "downloads": 0,
+    "ratings": {}
   }
 ]
