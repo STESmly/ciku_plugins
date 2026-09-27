@@ -1,4 +1,4 @@
-[\s\S]*https://www.bilibili.com/video/(.*)/[\s\S]*
+[\s\S]*https://www.bilibili.com/video/(.*)\?[\s\S]*
 $调用 bv详情 #%括号1%$
 
 [\s\S]*https://b23.tv/([A-Za-z0-9]{7})
