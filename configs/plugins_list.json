@@ -28,7 +28,7 @@
     "tag": "其他",
     "description": "cikubot版本>=1.4.1\n官机不支持获取卡片跳转链接获取，所以只能解析明文长短链\n野鸡自己下下来自己改吧",
     "contact": "",
-    "downloads": 0,
+    "downloads": 1,
     "ratings": {}
   }
 ]
