@@ -23,10 +23,10 @@
       "openid": "512EB67EE39A08C1C1E043F512FF66AA"
     },
     "upload_date": "2026-09-27 20:20:52",
-    "version": "1.0.1",
-    "update_date": "2026-09-27 20:42:50",
-    "tag": "b站视频",
-    "description": "cikubot版本>=1.4.1 官机不支持获取卡片跳转链接获取，所以只能解析明文长短链 野鸡自己下下来自己改吧",
+    "version": "1.0.2",
+    "update_date": "2026-09-29 21:21:23",
+    "tag": "b站视频解析",
+    "description": "cikubot版本≥1.4.1 官机卡片消息不提供视频链接，所以只能解析明文长链，野鸡自己改一下吧",
     "contact": "",
     "downloads": 2,
     "ratings": {}
