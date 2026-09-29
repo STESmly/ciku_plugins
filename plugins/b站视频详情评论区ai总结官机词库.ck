@@ -199,3 +199,29 @@ break
 d += 1
 循环尾
 $发送 ±md±%md_text%$
+
+[\s\S]*(哔哩哔哩|JSON消息)[\s\S]*
+source = @%event%#data#ark_data#fields#source
+source_logo = @%event%#data#ark_data#fields#source_logo
+title = @%event%#data#ark_data#fields#title
+source_l = hash_string(str(source_logo)+str(title))
+nc_source = @%event%#raw#elements#0#arkElement#bytesData#meta#detail_1#title
+nc_source_logo = @%event%#raw#elements#0#arkElement#bytesData#meta#detail_1#icon
+nc_title = @%event%#raw#elements#0#arkElement#bytesData#meta#detail_1#desc
+jumpurl = @%event%#raw#elements#0#arkElement#bytesData#meta#detail_1#qqdocurl
+nc_source_l = hash_string(str(nc_source_logo)+str(nc_title))
+如果 nc_source == "哔哩哔哩"
+$写 b视频解析/%nc_source_l%.txt %jumpurl%$
+如果尾
+另如果 source == "哔哩哔哩"
+循环True
+url = $读 b视频解析/%source_l%.txt None$
+如果 url == None
+pass
+如果尾
+否则
+break
+如果尾
+循环尾
+bvid = await resolve_bvid(url)
+$调用 bv详情 #%bvid%$
