@@ -95,7 +95,7 @@ break
 d += 1
 循环尾
 bt = $调用 详情kb #%括号%#%aid%$
-$发送 ±md±%md_text%±kd %bt%±$
+res = $发送 ±md±%md_text%±kd %bt%±$
 
 获取b站评论区_(.*)
 backbot = bot.self_id
