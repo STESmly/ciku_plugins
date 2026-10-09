@@ -1,4 +1,4 @@
-[\s\S]*https://www.bilibili.com/video/(.*)\?[\s\S]*
+[\s\S]*https://www.bilibili.com/video/(.*)/?\?[\s\S]*
 $调用 bv详情 #%括号1%$
 
 [\s\S]*https://b23.tv/([A-Za-z0-9]{7})
@@ -53,7 +53,7 @@ bt = {
 }
 返回 bt
 
-[内部]bv详情[括号]
+[内部]bv详情[括号 搜索=False]
 backbot = bot.self_id
 botlist = $BOT$
 c = 0
@@ -95,7 +95,11 @@ break
 d += 1
 循环尾
 bt = $调用 详情kb #%括号%#%aid%$
-res = $发送 ±md±%md_text%±kd %bt%±$
+如果 搜索 != False
+md_text += "\n > 该内容为标题模糊搜索结果，可能不太准确，准确获取请发送文本链接"
+如果尾
+$发送 ±md±%md_text%±kd %bt%±$
+$调用 获取视频 #%括号%#%title%$
 
 获取b站评论区_(.*)
 backbot = bot.self_id
@@ -200,28 +204,40 @@ d += 1
 循环尾
 $发送 ±md±%md_text%$
 
-[\s\S]*(哔哩哔哩|JSON消息)[\s\S]*
+[\s\S]*哔哩哔哩[\s\S]*
 source = @%event%#data#ark_data#fields#source
-source_logo = @%event%#data#ark_data#fields#source_logo
 title = @%event%#data#ark_data#fields#title
-source_l = hash_string(str(source_logo)+str(title))
-nc_source = @%event%#raw#elements#0#arkElement#bytesData#meta#detail_1#title
-nc_source_logo = @%event%#raw#elements#0#arkElement#bytesData#meta#detail_1#icon
-nc_title = @%event%#raw#elements#0#arkElement#bytesData#meta#detail_1#desc
-jumpurl = @%event%#raw#elements#0#arkElement#bytesData#meta#detail_1#qqdocurl
-nc_source_l = hash_string(str(nc_source_logo)+str(nc_title))
-如果 nc_source == "哔哩哔哩"
-$写 b视频解析/%nc_source_l%.txt %jumpurl%$
-如果尾
-另如果 source == "哔哩哔哩"
-循环True
-url = $读 b视频解析/%source_l%.txt None$
-如果 url == None
-pass
-如果尾
-否则
+如果 source == "哔哩哔哩"
+backbot = bot.self_id
+botlist = $BOT$
+c = 0
+循环 c < len(botlist)
+bot_type = @%botlist%#%c%#type
+如果 bot_type == 'BLive'
+bot = @%botlist%#%c%#bot
 break
 如果尾
+c += 1
 循环尾
-bvid = await resolve_bvid(url)
-$调用 bv详情 #%bvid%$
+url = "https://api.bilibili.com/x/web-interface/wbi/search/type"
+data = await bot._call_get_params(sessdata=bot.config.get("sessdata", "") or "", url=url, params={"search_type": "video", "keyword": title})
+bvid = @%data%#data#result#0#bvid
+d = 0
+循环 d < len(botlist)
+bot_data = @%botlist%#%d%#bot
+如果 bot_data.self_id == backbot
+bot = @%botlist%#%d%#bot
+break
+如果尾
+d += 1
+循环尾
+$调用 bv详情 #%bvid%#True$
+
+[内部]获取视频[bvid name]
+url = "https://xapi.peanutdl.com/beibei"
+data_js = {"api":"BEIBEI","url":f"https://www.bilibili.com/video/{bvid}","captcha":"","id":"","captcha_code":"","captcha_id":"","turnstile_token":"","captcha_type":"disabled"}
+data = $访问 %url% post None data_js$
+res = @%data%#mp4#player_url
+url = await save_video(res,f"{bot.self_id}/{name}")
+$发送 ±vid %url%±$
+await delete_file(url)
