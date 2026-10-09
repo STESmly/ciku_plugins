@@ -120,7 +120,7 @@ bt = {
           "id": "qiandao",
           "render_data": {
             "label": "我也要签到",
-                        "visited_label":"我也要签到",
+            "visited_label":"我也要签到",
             "style": 1
           },
           "action": {
@@ -137,7 +137,7 @@ bt = {
           "id": "qiandaobiao",
           "render_data": {
             "label": "查看本月签到",
-                        "visited_label":"查看本月签到",
+            "visited_label":"查看本月签到",
             "style": 1
           },
           "action": {
