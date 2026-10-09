@@ -28,7 +28,7 @@
     "tag": "b站视频解析",
     "description": "cikubot版本≥1.4.1 官机卡片消息不提供视频链接，所以在不开野鸡的情况下只能解析明文长链，开了野鸡且在同群即可解析卡片",
     "contact": "",
-    "downloads": 5,
+    "downloads": 6,
     "ratings": {}
   }
 ]
