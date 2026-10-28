@@ -62,5 +62,21 @@
     "contact": "",
     "downloads": 5,
     "ratings": {}
+  },
+  {
+    "file": "官机本地上传图片供md引用官方api函数演示版.ck",
+    "author": {
+      "avatar": "http://thirdqq.qlogo.cn/ek_qqapp/AQISpCG6AgWN2U5jc2eGnex0kU1fTA6fg4pujFGyXnKfu7tJZJLg20GHoCJG0g7m0QjMUvabXribpficpb7IK6JiblQS73JOYx72e8er1zF95vmGgSDyBQ/100",
+      "nickname": "STES沐霖韵",
+      "openid": "512EB67EE39A08C1C1E043F512FF66AA"
+    },
+    "upload_date": "2026-10-28 16:56:13",
+    "version": "1.0.0",
+    "update_date": "2026-10-28 16:56:13",
+    "tag": "md引用本地图片",
+    "description": "官方接口更新了但没时间更新软件，只能搓一个词库自行修改调用了",
+    "contact": "",
+    "downloads": 0,
+    "ratings": {}
   }
 ]
